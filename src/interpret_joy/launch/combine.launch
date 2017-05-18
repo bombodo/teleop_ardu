@@ -1,0 +1,27 @@
+<launch>
+ <!-- Turtlesim Node-->
+  <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="turtle_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.0" />
+  </node>
+
+ <!-- Arduino Node -->
+  <node pkg="rosserial_python" type="serial_node.py" name="arduNode">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="57600"/>
+  </node>
+
+ <!-- Axes -->
+  <param name="axis_forward" value="4" type="int"/>
+  <param name="axis_reverse" value="5" type="int"/>
+  <param name="axis_angular" value="0" type="int"/>
+  <param name="axis_lboost" value="3" type="int"/>
+  <param name="axis_aboost" value="2" type="int"/>
+
+  <param name="button_brake" value="7" type="int"/>
+  <node pkg="interpret_joy" type="readin" name="readjoy"/>
+</launch>
