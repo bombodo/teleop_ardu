@@ -26,7 +26,7 @@ To compile and upload to the Arduino
 ```
 catkin_make ardu_out_firmware_move-upload /dev/ttyXXX
 ```
-## Running
+# Running
 ```
 roslaunch interpret_joy combine.launch
 ```
