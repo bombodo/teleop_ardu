@@ -39,6 +39,10 @@ The Main Machine is unable to access the Arduino serial port
 ```
 Suggested: Modify the Arduino Node in src/interpret_joy/launch/combine.launch to appropriate port
 ```
+I want to use a different Arduino Product
+```
+Suggested: change the catkin_make in the firmware folder so that your desired model is represented
+```
 Wrong controller being used
 ```
 Suggested: Modify joy node in launch file with the appropriate controller input
