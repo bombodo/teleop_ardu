@@ -41,7 +41,7 @@ Suggested: Modify the Arduino Node in src/interpret_joy/launch/combine.launch to
 ```
 I want to use a different Arduino Product
 ```
-Suggested: change the catkin_make in the firmware folder so that your desired model is represented
+Suggested: change the CMakeLists.txt in the firmware folder so that your desired model is represented
 ```
 Wrong controller being used
 ```
